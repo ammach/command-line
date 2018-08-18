@@ -1,15 +1,15 @@
 // const shell = require('shelljs');
 //
-// if (shell.exec('docker images').code !== 0) {
+// if (shell.exec('git status').code !== 0) {
 //     shell.echo('Error: Git commit failed');
 //     shell.exit(1);
 // } else {
 //     console.log('good');
 // }
 
-const inquirer = require('inquirer');
 const question = require('./questions/questions');
-
+const inquirer = require('inquirer');
+const figlet = require('figlet')
 
 function main() {
     inquirer.prompt(question.questions)
@@ -18,4 +18,7 @@ function main() {
         });
 }
 
-main();
+figlet('ALG Tools', function(err, data) {
+    console.log(data);
+    main();
+});
