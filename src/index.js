@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // const shell = require('shelljs');
 //
 // if (shell.exec('git status').code !== 0) {
@@ -6,7 +8,7 @@
 // } else {
 //     console.log('good');
 // }
-
+//
 const question = require('./questions/questions');
 const inquirer = require('inquirer');
 const figlet = require('figlet')
